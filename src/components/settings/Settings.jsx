@@ -22,7 +22,7 @@ const Settings = () => {
       <h1>APP SETTINGS</h1>
       <p>
         Actual Config:
-        {config}
+        {config.theme}
       </p>
       <button type="button" onClick={handleClick}>
         Save New Settings

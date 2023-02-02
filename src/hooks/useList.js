@@ -16,6 +16,18 @@ const useList = (initialValue = []) => {
   // List is Empty ? true / false
   const isEmpty = () => value.length === 0;
 
+  function clear() {
+    setValue([]);
+  }
+
+  function orden() {
+    setValue([...value].sort());
+  }
+
+  function invert() {
+    setValue([...value].reverse());
+  }
+
   // TODO:Develop more functions for lists
 
   return {
@@ -24,6 +36,9 @@ const useList = (initialValue = []) => {
     push,
     remove,
     isEmpty,
+    clear,
+    orden,
+    invert,
   };
 };
 

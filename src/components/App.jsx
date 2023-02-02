@@ -1,6 +1,7 @@
 import React from "react";
 import Tasklist from "./lists/TaskList";
 import "bootstrap/dist/css/bootstrap.min.css";
+/* import Counter from "./lists/Counter"; */
 /* import Settings from "./settings/Settings"; */
 
 /**
@@ -11,7 +12,8 @@ export default function App() {
   return (
     <div>
       <Tasklist />
-      {/*     <Settings /> */}
+      {/* <Settings />
+      <Counter /> */}
     </div>
   );
 }

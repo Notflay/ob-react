@@ -32,20 +32,35 @@ const Tasklist = () => {
       {tasks.isEmpty() ? (
         <p>Task List is Empty</p>
       ) : (
-        <ul>
-          {tasks.value.map((task, index) => (
-            <li key={index} style={{ padding: "5px", margin: "5px" }} size="sm">
-              <Button
-                type="button"
-                variant="danger"
-                onClick={() => tasks.remove(index)}
+        <div>
+          <ul>
+            {tasks.value.map((task, index) => (
+              <li
+                key={index}
+                style={{ padding: "5px", margin: "5px" }}
+                size="sm"
               >
-                X
-              </Button>
-              <span style={{ marginLeft: "5px" }}>{task}</span>
-            </li>
-          ))}
-        </ul>
+                <Button
+                  type="button"
+                  variant="danger"
+                  onClick={() => tasks.remove(index)}
+                >
+                  X
+                </Button>
+                <span style={{ marginLeft: "5px" }}>{task}</span>
+              </li>
+            ))}
+          </ul>
+          <button type="button" onClick={tasks.clear}>
+            Eliminar
+          </button>
+          <button type="button" onClick={tasks.orden}>
+            Ordenar
+          </button>
+          <button type="button" onClick={tasks.invert}>
+            Invertir
+          </button>
+        </div>
       )}
     </div>
   );
