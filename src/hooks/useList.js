@@ -5,12 +5,20 @@ const useList = (initialValue = []) => {
 
   // Push new value to list
   const push = (element) => {
-    setValue((oldValue) => [...oldValue, element]);
+    setValue((oldValue) => [...oldValue, { task: element, completed: false }]);
   };
 
   // Remove value from list
   const remove = (index) => {
     setValue((oldValue) => oldValue.filter((_, i) => i !== index));
+  };
+
+  // Cambia el estado de la tarea
+  const change = (index) => {
+    const list = [...value];
+    list[index].completed = !list[index].completed;
+    console.log(list);
+    setValue(list);
   };
 
   // List is Empty ? true / false
@@ -38,6 +46,7 @@ const useList = (initialValue = []) => {
     isEmpty,
     clear,
     orden,
+    change,
     invert,
   };
 };

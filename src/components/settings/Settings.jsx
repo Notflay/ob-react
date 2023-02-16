@@ -6,15 +6,20 @@ const defaultConfig = {
   lang: "es",
 };
 
-const Settings = () => {
+const Settings = ({ toggleDark }) => {
   const [config, setConfig] = useLocalStorage("config", defaultConfig);
 
+  /**
+   * Función para intercambiar ligth <-> dark
+   * @param {*} event - Evento de click proveniente de React
+   */
   const handleClick = (event) => {
     event.preventDefault();
     setConfig((oldConfig) => ({
       ...oldConfig,
-      theme: "light",
+      theme: oldConfig.theme === "ligth" ? "dark" : "ligth",
     }));
+    toggleDark(config.theme);
   };
 
   return (
@@ -24,8 +29,8 @@ const Settings = () => {
         Actual Config:
         {config.theme}
       </p>
-      <button type="button" onClick={handleClick}>
-        Save New Settings
+      <button className="btn" type="button" onClick={handleClick}>
+        Toggle DarkMode
       </button>
     </div>
   );

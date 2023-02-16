@@ -37,6 +37,86 @@
                 
                 </li>
               
+                
+                <li><a
+                  href='#toggledark'
+                  class="">
+                  toggleDark
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#tasklist'
+                  class="">
+                  Tasklist
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#handlesubmit'
+                  class="">
+                  handleSubmit
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#istaskempty'
+                  class="">
+                  isTaskEmpty
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#editenewitem'
+                  class="">
+                  editeNewItem
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#removeitem'
+                  class="">
+                  removeItem
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#handleinputchange'
+                  class="">
+                  handleInputChange
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#handleclick'
+                  class="">
+                  handleClick
+                  
+                </a>
+                
+                </li>
+              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -62,7 +142,7 @@
 
   <p>Funcion Anónima para crear un Componente principal</p>
 
-    <div class='pre p1 fill-light mt0'>new App(): React.Component</div>
+    <div class='pre p1 fill-light mt0'>App</div>
   
   
 
@@ -85,6 +165,505 @@
 
       
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='toggledark'>
+      toggleDark
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Funcíon para cambiar el estado del dark y así poder cambiar
+la className</p>
+
+    <div class='pre p1 fill-light mt0'>toggleDark</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>theme</span> <code class='quiet'>(any)</code>
+	    valor de config.theme
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='tasklist'>
+      Tasklist
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Componente que gestiona la lista de tareas</p>
+
+    <div class='pre p1 fill-light mt0'>Tasklist</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>React.component</code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='handlesubmit'>
+      handleSubmit
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Añade una nueva tarea a la lista</p>
+
+    <div class='pre p1 fill-light mt0'>handleSubmit</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>event</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='istaskempty'>
+      isTaskEmpty
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Función para chequear si la lista de tareas está vacía</p>
+
+    <div class='pre p1 fill-light mt0'>isTaskEmpty</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        true si taskList.length === 0;
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='editenewitem'>
+      editeNewItem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Editar el nombre de la nueva tarea</p>
+
+    <div class='pre p1 fill-light mt0'>editeNewItem</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>e</span> <code class='quiet'>(any)</code>
+	    Evento de onchange proveniente de React
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='removeitem'>
+      removeItem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Función para eliminar de una tarea en concreto</p>
+
+    <div class='pre p1 fill-light mt0'>removeItem</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(any)</code>
+	    -- Indice de la tarea a eliminar
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='handleinputchange'>
+      handleInputChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Función para cambiar el estado del NewTak con lo que digites</p>
+
+    <div class='pre p1 fill-light mt0'>handleInputChange</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>event</span> <code class='quiet'>(any)</code>
+	    Valor del input
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='handleclick'>
+      handleClick
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Función para intercambiar ligth &#x3C;-> dark</p>
+
+    <div class='pre p1 fill-light mt0'>handleClick</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>event</span> <code class='quiet'>(any)</code>
+	    Evento de click proveniente de React
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
   
 
   

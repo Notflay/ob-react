@@ -5,7 +5,7 @@ import useList from "../../hooks/useList";
 
 /**
  * Componente que gestiona la lista de tareas
- *
+ * v2: la nueva tarea se añade para ver si está completada
  * @returns {React.component}
  */
 
@@ -16,7 +16,6 @@ const Tasklist = () => {
   /**
    * Añade una nueva tarea a la lista
    */
-
   const handleSubmit = (event) => {
     event.preventDefault();
     tasks.push(newTask);
@@ -44,6 +43,18 @@ const Tasklist = () => {
     tasks.remove(index);
   };
 
+  /**
+   * Cambia al estado de la tarea segun la posicion
+   * @param {*} index Posicion de la tarea
+   */
+  const changeItem = (index) => {
+    tasks.change(index);
+  };
+
+  /**
+   * Función para cambiar el estado del NewTak con lo que digites
+   * @param {*} event Valor del input
+   */
   const handleInputChange = (event) => {
     setNewTask(event.target.value);
   };
@@ -52,8 +63,17 @@ const Tasklist = () => {
     <div>
       <h1>Task List</h1>
       <form onSubmit={handleSubmit}>
-        <input value={newTask} placeholder="New Task" type="text" />
-        <button type="submit">Create Task</button>
+        <input
+          onKeyDown={(e) => e.key === "Enter" && handleSubmit}
+          className="input"
+          onChange={handleInputChange}
+          value={newTask}
+          placeholder="New Task"
+          type="text"
+        />
+        <button className="btn" type="submit">
+          Create Task
+        </button>
       </form>
       {tasks.isEmpty() ? (
         <p>Task List is Empty</p>
@@ -69,11 +89,18 @@ const Tasklist = () => {
                 <Button
                   type="button"
                   variant="danger"
-                  onClick={() => tasks.remove(index)}
+                  onClick={() => changeItem(index)}
                 >
                   X
                 </Button>
-                <span style={{ marginLeft: "5px" }}>{task}</span>
+                <span
+                  style={{
+                    marginLeft: "5px",
+                    textDecoration: task.completed ? "line-through" : null,
+                  }}
+                >
+                  {task.task}
+                </span>
               </li>
             ))}
           </ul>
